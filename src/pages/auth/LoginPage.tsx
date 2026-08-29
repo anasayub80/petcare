@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Input } from '../../components/common/Input';
 import { Button } from '../../components/common/Button';
 import { Badge } from '../../components/common/Badge';
+import { BrandLogo } from '../../components/common/BrandLogo';
 import { PawPrint, Lock, Mail, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -41,7 +42,7 @@ export const LoginPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-28 pb-16 px-4 flex items-center justify-center relative overflow-hidden bg-cream-50">
-      {/* Background ambient blobs */}
+      {/* Decorative gradient blur */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-terracotta-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-sage-100/50 rounded-full blur-3xl -z-10 pointer-events-none" />
 
@@ -52,19 +53,9 @@ export const LoginPage: React.FC = () => {
         className="w-full max-w-md bg-white rounded-3xl sm:rounded-5xl p-6 sm:p-10 shadow-warm-xl border border-cream-300 relative z-10"
       >
         {/* Brand Header */}
-        <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-2.5 group mb-4">
-            <div className="w-12 h-12 rounded-2xl bg-terracotta-500 text-white flex items-center justify-center shadow-warm-sm group-hover:scale-105 transition-all">
-              <PawPrint className="w-6 h-6" />
-            </div>
-            <div className="text-left">
-              <span className="text-2xl font-black text-chocolate-900 leading-none block">
-                Paws<span className="text-terracotta-500 italic font-serif">&</span>Claws
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-chocolate-600">
-                Customer Portal
-              </span>
-            </div>
+        <div className="text-center mb-8 flex flex-col items-center">
+          <Link to="/" className="inline-flex items-center group mb-4">
+            <BrandLogo size="lg" />
           </Link>
 
           <h1 className="text-2xl sm:text-3xl font-black text-chocolate-900 tracking-tight">

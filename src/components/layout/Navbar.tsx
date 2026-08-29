@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { PawPrint, Menu, X, Calendar, Sparkles, UserCheck, LayoutDashboard } from 'lucide-react';
 import { Button } from '../common/Button';
 import { Badge } from '../common/Badge';
+import { BrandLogo } from '../common/BrandLogo';
 import { MagneticButton } from '../common/MagneticButton';
 import { PawIllustration, SparkleIllustration } from '../common/PetIllustrations';
 import { cn } from '../../utils/cn';
@@ -92,27 +93,13 @@ export const Navbar: React.FC = () => {
               : 'bg-cream-50/85 backdrop-blur-md border border-cream-200/60 shadow-warm-xs'
           )}
         >
-          {/* Logo with interactive hover tilt & waggle */}
+          {/* Logo with pet-care-ai-logo-v2 mark */}
           <Link
             to="/"
-            className="flex items-center gap-2 sm:gap-2.5 group shrink-0"
+            className="flex items-center group shrink-0"
             data-cursor="hover"
           >
-            <motion.div
-              whileHover={{ rotate: [0, -10, 10, -5, 0], scale: 1.08 }}
-              transition={{ duration: 0.5 }}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-terracotta-500 text-white flex items-center justify-center shadow-warm-sm group-hover:bg-terracotta-600 transition-colors shrink-0"
-            >
-              <PawPrint className="w-4 h-4 sm:w-5 sm:h-5" />
-            </motion.div>
-            <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-black tracking-tight text-chocolate-900 leading-none">
-                Paws<span className="text-terracotta-500 font-normal italic font-serif">&</span>Claws
-              </span>
-              <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-chocolate-600/70 mt-0.5">
-                Pet Care & AI Wellness
-              </span>
-            </div>
+            <BrandLogo size="md" />
           </Link>
 
           {/* Desktop Nav Links with animated sliding pill */}

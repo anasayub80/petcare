@@ -1,0 +1,49 @@
+<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3E3A5E"/>
+      <stop offset="100%" stop-color="#2C2947"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="640" height="640" fill="#FBF6EF"/>
+
+  <!-- ===== MARK: circular badge, pet ear silhouette + heartbeat pulse ending in AI spark ===== -->
+  <g transform="translate(320,225)">
+
+    <!-- badge circle -->
+    <circle cx="0" cy="0" r="115" fill="url(#badgeGrad)"/>
+
+    <!-- two rounded pet ears peeking from top of circle -->
+    <path d="M -55 -78 C -78 -110, -78 -140, -50 -132 C -30 -126, -28 -96, -30 -70 Z" fill="#4FD1A5"/>
+    <path d="M 55 -78 C 78 -110, 78 -140, 50 -132 C 30 -126, 28 -96, 30 -70 Z" fill="#4FD1A5"/>
+
+    <!-- heartbeat pulse line across the badge -->
+    <path d="M -70 8
+             L -38 8
+             L -24 -22
+             L -6 34
+             L 8 8
+             L 24 8
+             L 38 -14
+             L 52 8
+             L 70 8"
+          fill="none" stroke="#FBF6EF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- AI spark at the end of the pulse -->
+    <g transform="translate(70,8)">
+      <circle r="15" fill="#4FD1A5"/>
+      <path d="M 0 -8 L 2.5 -2 L 8 0 L 2.5 2 L 0 8 L -2.5 2 L -8 0 L -2.5 -2 Z" fill="#2C2947"/>
+    </g>
+
+  </g>
+
+  <!-- ===== WORDMARK (rounded sans, different feel from previous version) ===== -->
+  <text x="320" y="410" text-anchor="middle" font-family="Verdana, 'Trebuchet MS', sans-serif" font-size="42" font-weight="700" fill="#2C2947" letter-spacing="2">PET CARE</text>
+
+  <!-- pill-style tagline badge instead of a plain divider line -->
+  <rect x="188" y="428" width="264" height="34" rx="17" fill="#4FD1A5"/>
+  <text x="320" y="451" text-anchor="middle" font-family="Verdana, 'Trebuchet MS', sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#2C2947">AI POWERED BOOKING</text>
+
+</svg>

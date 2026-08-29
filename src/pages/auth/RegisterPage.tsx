@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { Input } from '../../components/common/Input';
 import { Button } from '../../components/common/Button';
+import { BrandLogo } from '../../components/common/BrandLogo';
 import { PawPrint, Lock, Mail, User, Phone, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -41,19 +42,9 @@ export const RegisterPage: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="w-full max-w-md bg-white rounded-3xl sm:rounded-5xl p-6 sm:p-10 shadow-warm-xl border border-cream-300 relative z-10"
       >
-        <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-2.5 group mb-4">
-            <div className="w-12 h-12 rounded-2xl bg-terracotta-500 text-white flex items-center justify-center shadow-warm-sm group-hover:scale-105 transition-all">
-              <PawPrint className="w-6 h-6" />
-            </div>
-            <div className="text-left">
-              <span className="text-2xl font-black text-chocolate-900 leading-none block">
-                Paws<span className="text-terracotta-500 italic font-serif">&</span>Claws
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-chocolate-600">
-                Customer Portal
-              </span>
-            </div>
+        <div className="text-center mb-8 flex flex-col items-center">
+          <Link to="/" className="inline-flex items-center group mb-4">
+            <BrandLogo size="lg" />
           </Link>
 
           <h1 className="text-2xl sm:text-3xl font-black text-chocolate-900 tracking-tight">

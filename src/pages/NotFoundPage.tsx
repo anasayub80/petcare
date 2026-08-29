@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import { PawPrint, Home } from 'lucide-react';
 import { Button } from '../components/common/Button';
 import { Badge } from '../components/common/Badge';
+import { BrandLogo } from '../components/common/BrandLogo';
 
 export const NotFoundPage: React.FC = () => {
   return (
     <div className="pt-40 pb-28 text-center px-4">
-      <div className="max-w-md mx-auto space-y-6">
-        <div className="w-20 h-20 rounded-full bg-cream-200 text-terracotta-500 mx-auto flex items-center justify-center shadow-warm-sm border border-cream-300">
-          <PawPrint className="w-10 h-10 animate-bounce" />
-        </div>
+      <div className="max-w-md mx-auto space-y-6 flex flex-col items-center">
+        <BrandLogo size="xl" showText={false} />
 
         <Badge variant="terracotta" size="md">
           Page Not Found

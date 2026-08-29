@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import { usePetCare } from '../../context/PetCareContext';
 import { NotificationDropdown } from './NotificationDropdown';
 import { Button } from '../common/Button';
+import { BrandLogo } from '../common/BrandLogo';
 import { PawIllustration, SparkleIllustration } from '../common/PetIllustrations';
 import {
   PawPrint,
@@ -56,22 +57,9 @@ export const DashboardLayout: React.FC = () => {
       {/* ========================================================================= */}
       <aside className="hidden md:flex flex-col justify-between w-60 lg:w-72 bg-cream-100/90 border-r border-cream-300 p-5 lg:p-6 sticky top-0 h-screen z-30 shrink-0">
         <div>
-          {/* Brand Logo */}
-          <Link to="/dashboard" className="flex items-center gap-2.5 group mb-8" data-cursor="hover">
-            <motion.div
-              whileHover={{ rotate: [0, -10, 10, 0], scale: 1.08 }}
-              className="w-10 h-10 rounded-2xl bg-terracotta-500 text-white flex items-center justify-center shadow-warm-sm group-hover:bg-terracotta-600 transition-colors"
-            >
-              <PawPrint className="w-5 h-5" />
-            </motion.div>
-            <div className="flex flex-col">
-              <span className="text-xl font-black tracking-tight text-chocolate-900 leading-none">
-                Paws<span className="text-terracotta-500 italic font-serif">&</span>Claws
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-chocolate-600 mt-0.5 flex items-center gap-1">
-                <SparkleIllustration size={9} color="#D97746" /> Pet Parent Portal
-              </span>
-            </div>
+          {/* Brand Logo with pet-care-ai-logo-v2 */}
+          <Link to="/dashboard" className="flex items-center group mb-8" data-cursor="hover">
+            <BrandLogo size="md" subtextColor="text-chocolate-600" />
           </Link>
 
           {/* Navigation Links with animated active pill */}
@@ -182,13 +170,8 @@ export const DashboardLayout: React.FC = () => {
             </button>
 
             {/* Mobile Brand Mark */}
-            <Link to="/dashboard" className="flex items-center gap-2 md:hidden">
-              <div className="w-8 h-8 rounded-xl bg-terracotta-500 text-white flex items-center justify-center shadow-warm-xs">
-                <PawPrint className="w-4 h-4" />
-              </div>
-              <span className="text-base font-black tracking-tight text-chocolate-900">
-                Paws<span className="text-terracotta-500 italic font-serif">&</span>Claws
-              </span>
+            <Link to="/dashboard" className="flex items-center md:hidden">
+              <BrandLogo size="sm" showText={true} />
             </Link>
 
             {/* Breadcrumb info (Desktop) */}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PawPrint, Heart, Phone, Mail, MapPin, Clock, ArrowRight, Instagram, Facebook, Twitter, Check } from 'lucide-react';
 import { PawIllustration } from '../common/PetIllustrations';
+import { BrandLogo } from '../common/BrandLogo';
 import { motion } from 'framer-motion';
 
 export const Footer: React.FC = () => {
@@ -28,21 +29,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 pb-16 border-b border-chocolate-800">
           {/* Col 1 & 2: Brand Bio */}
           <div className="lg:col-span-2 space-y-5">
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <motion.div
-                whileHover={{ rotate: [0, -10, 10, 0], scale: 1.08 }}
-                className="w-10 h-10 rounded-2xl bg-terracotta-500 text-white flex items-center justify-center shadow-warm-sm"
-              >
-                <PawPrint className="w-5 h-5" />
-              </motion.div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight text-white leading-none">
-                  Paws<span className="text-terracotta-400 font-normal italic font-serif">&</span>Claws
-                </span>
-                <span className="text-[10px] font-semibold uppercase tracking-widest text-cream-400 mt-0.5">
-                  Pet Care & AI Wellness
-                </span>
-              </div>
+            <Link to="/" className="flex items-center group">
+              <BrandLogo size="lg" textColor="text-white" subtextColor="text-cream-400" />
             </Link>
 
             <p className="text-cream-300/80 text-sm leading-relaxed max-w-sm">
